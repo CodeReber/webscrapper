@@ -115,7 +115,7 @@ class Main(QMainWindow, FORM_CLASS):
             self.tableWidget_5.insertRow(rownum)
             for columnnum, data in enumerate(rowdata):
                 self.tableWidget_5.setItem(rownum, columnnum, QTableWidgetItem(str(data)))
- 
+        self.tableWidget_5.resizeColumnsToContents()
         #self.label_2.setText("4")
         #Loop through and output to the dropped table
         # for rownum, rowdata in enumerate(results_table_dropped):
@@ -167,7 +167,7 @@ class Main(QMainWindow, FORM_CLASS):
         #Put DB query results into table
         dt1 = "24/12/2021"
         dt2 = "25/12/2021" 
-        results_table = cur.execute("select sh1.hostname, sh1.drive, sh1.perc, sh2.perc from vm_org as sh1, vm_current as sh2 where sh1.hostname = sh2.hostname AND sh1.drive = sh2.drive")
+        results_table = cur.execute("select DISTINCT sh1.hostname, sh1.drive, sh1.perc, sh2.perc from vm_org as sh1, vm_current as sh2 where sh1.hostname = sh2.hostname AND sh1.drive = sh2.drive")
         #results_table_dropped = cur1.execute("select distinct hostname from scrap where hostname not in (select hostname from sheet1)")
         #results_table_added = cur2.execute("select distinct hostname from sheet1 where hostname not in (select hostname from scrap)")
         self.tableWidget.setRowCount(0)
@@ -179,7 +179,7 @@ class Main(QMainWindow, FORM_CLASS):
             self.tableWidget.insertRow(rownum)
             for columnnum, data in enumerate(rowdata):
                 self.tableWidget.setItem(rownum, columnnum, QTableWidgetItem(str(data)))
- 
+        self.tableWidget.resizeColumnsToContents()
         #self.label_2.setText("4")
         #Loop through and output to the dropped table
         # for rownum, rowdata in enumerate(results_table_dropped):

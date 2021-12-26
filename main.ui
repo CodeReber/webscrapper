@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1334</width>
+    <width>1402</width>
     <height>891</height>
    </rect>
   </property>
@@ -22,9 +22,9 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>10</y>
-      <width>1271</width>
+      <width>1361</width>
       <height>831</height>
      </rect>
     </property>
@@ -64,7 +64,7 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>350</x>
         <y>150</y>
         <width>171</width>
         <height>21</height>
@@ -77,12 +77,18 @@
      <widget class="QTableWidget" name="tableWidget_5">
       <property name="geometry">
        <rect>
-        <x>480</x>
+        <x>420</x>
         <y>0</y>
-        <width>761</width>
+        <width>821</width>
         <height>691</height>
        </rect>
       </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
       <column>
        <property name="text">
         <string>Hostname</string>
@@ -136,7 +142,7 @@
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>10</x>
         <y>80</y>
         <width>221</width>
         <height>91</height>
@@ -149,8 +155,8 @@
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>130</y>
+        <x>230</x>
+        <y>30</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -162,12 +168,15 @@
      <widget class="QTableWidget" name="tableWidget">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>1</y>
-        <width>731</width>
+        <x>300</x>
+        <y>0</y>
+        <width>1051</width>
         <height>701</height>
        </rect>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
       <column>
        <property name="text">
         <string>HostName</string>
@@ -226,7 +235,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1334</width>
+     <width>1402</width>
      <height>21</height>
     </rect>
    </property>
